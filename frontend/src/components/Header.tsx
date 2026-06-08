@@ -1,6 +1,11 @@
-function Header(props) {
+type HeaderProps = {
+            titulo: string
+          };
+          
+function Header(props: HeaderProps) {
 
   return (
+      
       <section id="center">
         <div>
           <h1>{props.titulo}</h1>
