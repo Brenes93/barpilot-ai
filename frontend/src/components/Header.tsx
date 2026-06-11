@@ -1,5 +1,7 @@
 type HeaderProps = {
-            titulo: string
+            titulo: string;
+            subtitulo?: string;
+            descripcion?: string;
           };
           
 function Header(props: HeaderProps) {
@@ -9,7 +11,8 @@ function Header(props: HeaderProps) {
       <section id="center">
         <div>
           <h1>{props.titulo}</h1>
-          <p>Mi primer proyecto Full Stack para aprender programación.</p>
+          {props.subtitulo && <p>{props.subtitulo}</p>}
+          {props.descripcion && <p>{props.descripcion}</p>}
         </div>
       </section>
   )
